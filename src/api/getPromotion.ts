@@ -1,4 +1,4 @@
-import type { Promotion } from "./interface.ts";
+import type { Promotion } from "../interface";
 
 interface Response {
   promotion?: Promotion;

@@ -5,13 +5,11 @@ import { css, ThemeProvider } from "@emotion/react";
 import { ServiceLogo } from "../icons/ServiceLogo";
 import { SparcsIcon } from "../icons/SparcsIcon";
 import { Arrow } from "../icons/Arrow";
-import type { TextPromotion } from "../../api/interface";
+import type { TextPromotion } from "../../interface";
 
 export const TextBanner: React.FC<Omit<TextPromotion, "type">> = React.memo(props => (
   <ThemeProvider theme={props.style}>
     <Banner>
-    {/*  <div style={bannerStyle}>*/}
-
       <ServiceLogo serviceName={props.serviceName} />
 
       <Text>
