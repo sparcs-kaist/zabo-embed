@@ -35,8 +35,7 @@ jobs:
         with:
           version: ${{ matrix.pnpm-version }}
           run_install: true
-          
+
+      - run: pnpm config set //npm.pkg.github.com/:_authToken ${{secrets.GITHUB_TOKEN}}
       - run: pnpm build
       - run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
