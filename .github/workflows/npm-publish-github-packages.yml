@@ -11,31 +11,32 @@ jobs:
   build-and-publish-gpr:
     name: Build and Publish
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.x]
         pnpm-version: [8.x]
-    
+
     permissions:
       contents: read
       packages: write
-      
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: https://npm.pkg.github.com/
-          
+
       - name: Install pnpm ${{ matrix.pnpm-version }}
         uses: pnpm/action-setup@v2
         with:
           version: ${{ matrix.pnpm-version }}
           run_install: true
 
-      - run: pnpm config set //npm.pkg.github.com/:_authToken ${{secrets.GITHUB_TOKEN}}
       - run: pnpm build
-      - run: pnpm publish --no-git-checks
+      - run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

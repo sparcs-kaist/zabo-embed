@@ -50,5 +50,8 @@
     "react-shadow": "^20.4.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
