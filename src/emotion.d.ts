@@ -7,5 +7,6 @@ declare module "@emotion/react" {
   export interface Theme extends CustomTheme {
     primary: boolean;
     themeColor: string;
+    serviceColor: string;
   }
 }

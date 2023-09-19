@@ -17,10 +17,10 @@ export const TextBanner: React.FC<Omit<TextPromotion, "type">> = React.memo(prop
         <p>{props.subText}</p>
       </Text>
 
-      <a href={props.actionURL}>
+      <Button href={props.actionURL}>
         <span>{props.actionText}</span>
         <Arrow />
-      </a>
+      </Button>
 
       <SparcsIcon />
       {/*</div>*/}
@@ -32,6 +32,7 @@ const Banner = styled.div(
   ({ theme }) => css`
     position: relative;
     font-family: NanumSquare, sans-serif;
+    line-height: 1;
 
     border-radius: 6px;
     overflow: hidden;
@@ -46,22 +47,6 @@ const Banner = styled.div(
     background-color: ${theme.primary ? theme.themeColor : "#ffffff"};
     border: ${theme.primary ? "none" : "1px solid #ececec"};
 
-    & > a {
-      background-color: ${theme.primary
-        ? "rgba(255, 255, 255, 0.25)"
-        : theme.themeColor};
-      text-decoration: none;
-      color: #ffffff;
-
-      border-radius: 4px;
-      font-size: 11px;
-      font-weight: 400;
-      display: flex;
-      flex-direction: row;
-      gap: 6px;
-      padding: 8px 12px;
-    }
-
     & > svg {
       width: 65px;
       height: 140px;
@@ -72,6 +57,22 @@ const Banner = styled.div(
     }
   `,
 );
+
+const Button = styled.a`
+  background-color: ${({ theme }) => theme.primary
+    ? "rgba(255, 255, 255, 0.25)"
+    : theme.themeColor};
+  text-decoration: none;
+  color: #ffffff;
+
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  padding: 8px 12px;
+`;
 
 const Text = styled.div(
   ({ theme }) => css`

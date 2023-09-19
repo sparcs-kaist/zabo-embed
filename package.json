@@ -1,5 +1,5 @@
 {
-  "name": "@sparcs-kaist/zabo-embed",
+  "name": "zabo-embed",
   "version": "0.0.1",
   "description": "Embed component for creating banner embeds in SPARCS services",
   "type": "module",
@@ -47,10 +47,6 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "react-shadow": "^20.4.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "react-slick": "^0.29.0"
   }
 }
