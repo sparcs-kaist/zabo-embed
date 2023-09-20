@@ -15,7 +15,7 @@ export interface ImagePromotion {
   type: "image";
   items: {
     imageURL: string;
-    actionURL: string;
+    actionURL?: string;
   }[];
 }
 

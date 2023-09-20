@@ -62,6 +62,11 @@ export const slick = (theme: Theme) => css`
     & > div {
       display: flex;
       height: min-content;
+      
+      a, img {
+        display: inline-block;
+        width: 100%;
+      }
     }
   }
 
@@ -103,7 +108,8 @@ export const slick = (theme: Theme) => css`
 
   .slick-dots {
     position: absolute;
-    bottom: 8px;
+    right: 0;
+    bottom: 0;
 
     box-sizing: border-box;
     display: flex !important;
@@ -112,8 +118,7 @@ export const slick = (theme: Theme) => css`
     
     gap: 8px;
 
-    width: 100%;
-    padding: 0 10px;
+    padding: 8px 10px;
     margin: 0;
 
     list-style: none;
@@ -152,7 +157,6 @@ export const slick = (theme: Theme) => css`
   .slick-dots li button:focus {
     opacity: .6;
   }
-
 
   .slick-dots li.slick-active button {
     opacity: 1;

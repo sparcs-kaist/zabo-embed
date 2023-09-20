@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import Slider from "react-slick";
 import { Global, ThemeProvider } from "@emotion/react";
 
@@ -11,11 +11,20 @@ interface Props extends Omit<ImagePromotion, "type"> {
 
 export const ImageBanner: React.FC<Props> = ({ serviceColor, items }) => (
   <ThemeProvider theme={{ serviceColor }}>
-    <Slider dots arrows={false}>
+    <Slider dots autoplay autoplaySpeed={5000} arrows={false}>
       {items.map(promotion => (
-        <img src={promotion.imageURL} />
+        <Link href={promotion.actionURL}>
+          <img src={promotion.imageURL} />
+        </Link>
       ))}
     </Slider>
     <Global styles={slick} />
   </ThemeProvider>
 );
+
+interface LinkProps extends PropsWithChildren {
+  href?: string;
+}
+
+const Link: React.FC<LinkProps> = ({ href, children }) =>
+  href ? <a href={href}>{children}</a> : children;

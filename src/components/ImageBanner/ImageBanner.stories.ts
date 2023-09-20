@@ -19,7 +19,6 @@ export const Default: Story = {
     items: [
       {
         "imageURL": "http://localhost:3000/assets/release-note.png",
-        "actionURL": "https://otl.sparcs.org",
       },
       {
         "imageURL": "http://localhost:3000/assets/app-launch.png",
