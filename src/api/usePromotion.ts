@@ -6,9 +6,9 @@ export const usePromotion = () => {
   const [promotion, setPromotion] = useState<Promotion | null>(null);
 
   useEffect(() => {
-    getPromotion().then(
-      promotion => promotion && setPromotion(promotion)
-    );
+    getPromotion()
+      .then(promotion => promotion && setPromotion(promotion))
+      .catch();
   }, []);
 
   return promotion;
