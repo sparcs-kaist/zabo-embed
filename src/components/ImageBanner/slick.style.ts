@@ -64,7 +64,7 @@ export const slick = (theme: Theme) => css`
       height: min-content;
       
       a, img {
-        display: inline-block;
+        display: flex;
         width: 100%;
       }
     }

@@ -62,6 +62,7 @@ const Banner = styled.div(
 
 const Button = styled.a`
   all: unset;
+  cursor: pointer;
 
   background-color: ${({ theme }) => theme.primary
     ? "rgba(255, 255, 255, 0.25)"
