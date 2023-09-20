@@ -30,6 +30,8 @@ export const TextBanner: React.FC<Omit<TextPromotion, "type">> = React.memo(prop
 
 const Banner = styled.div(
   ({ theme }) => css`
+    all: unset;
+    
     position: relative;
     font-family: NanumSquare, sans-serif;
     line-height: 1;
@@ -59,6 +61,8 @@ const Banner = styled.div(
 );
 
 const Button = styled.a`
+  all: unset;
+
   background-color: ${({ theme }) => theme.primary
     ? "rgba(255, 255, 255, 0.25)"
     : theme.themeColor};
@@ -66,16 +70,22 @@ const Button = styled.a`
   color: #ffffff;
 
   border-radius: 4px;
+
   font-size: 11px;
   font-weight: 400;
+
   display: flex;
   flex-direction: row;
+  align-items: center;
+
   gap: 6px;
   padding: 8px 12px;
 `;
 
 const Text = styled.div(
   ({ theme }) => css`
+    all: unset;
+    
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -87,11 +97,15 @@ const Text = styled.div(
     }
 
     & > h1 {
+      all: unset;
+      
       font-size: 16px;
       font-weight: 700;
     }
 
     & > p {
+      all: unset;
+      
       font-size: 14px;
       font-weight: 400;
       opacity: 0.6;

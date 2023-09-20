@@ -8,7 +8,7 @@ interface Props extends PropsWithChildren {
   customStyle?: React.CSSProperties;
 }
 
-export const Provider: React.FC<Props> = ({
+export const Scope: React.FC<Props> = ({
   customStyle,
   children,
 }) => (
@@ -29,7 +29,7 @@ const loadFonts = css`
 `;
 
 const Reset = styled.div`
-  all: initial;
+  all: revert;
   line-height: initial;
   overflow: hidden;
 `;

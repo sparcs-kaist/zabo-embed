@@ -1,3 +1,3 @@
 export * from "./TextBanner";
 export * from "./ImageBanner";
-export * from "./Provider";
+export * from "./Scope";
