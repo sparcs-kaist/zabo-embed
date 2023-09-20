@@ -5,7 +5,7 @@ interface Response {
 }
 
 export const getPromotion = async (): Promise<Promotion | null> => {
-  const res = await fetch("http://localhost:3000/api/random");
+  const res = await fetch("https://embed.zabo.sparcs.org/api/random");
   const data = await res.json() as Response;
   return data?.promotion || null;
-}
+};
