@@ -1,7 +1,7 @@
 import React from "react";
 
 import { usePromotion } from "./api";
-import { Scope, TextBanner, ImageBanner } from "./components";
+import { Scope, TextBanner, ImageBanner, LoadFont } from "./components";
 
 export interface ZaboEmbedProps {
   serviceColor: string;
@@ -17,13 +17,14 @@ export const ZaboEmbed: React.FC<ZaboEmbedProps> = ({
   const promotion = usePromotion();
 
   return (
-    promotion && <Scope
-      customStyle={{ borderRadius: round, ...style }}
-    >
-      {promotion.type === "text"
-        ? <TextBanner {...promotion} />
-        : <ImageBanner serviceColor={serviceColor} {...promotion} />
-      }
-    </Scope>
+    promotion && <>
+      <LoadFont />
+      <Scope customStyle={{ borderRadius: round, ...style }}>
+        {promotion.type === "text"
+          ? <TextBanner {...promotion} />
+          : <ImageBanner serviceColor={serviceColor} {...promotion} />
+        }
+      </Scope>
+    </>
   );
 };
