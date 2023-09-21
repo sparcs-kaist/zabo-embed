@@ -13,7 +13,7 @@ export const ImageBanner: React.FC<Props> = ({ serviceColor, items }) => (
   <ThemeProvider theme={{ serviceColor }}>
     <Slider dots autoplay autoplaySpeed={5000} arrows={false}>
       {items.map(promotion => (
-        <Link href={promotion.actionURL}>
+        <Link key={promotion.imageURL} href={promotion.actionURL}>
           <img src={promotion.imageURL} />
         </Link>
       ))}
