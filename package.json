@@ -1,6 +1,6 @@
 {
   "name": "zabo-embed",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Embed component for creating banner embeds in SPARCS services",
   "type": "module",
   "main": "dist/zabo-embed.umd.cjs",
