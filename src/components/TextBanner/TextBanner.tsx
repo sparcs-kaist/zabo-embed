@@ -7,31 +7,33 @@ import { SparcsIcon } from "../icons/SparcsIcon";
 import { Arrow } from "../icons/Arrow";
 import type { TextPromotion } from "../../interface";
 
-export const TextBanner: React.FC<Omit<TextPromotion, "type">> = React.memo(props => (
+export const TextBanner: React.FC<Omit<TextPromotion, "type">> = (props) => (
   <ThemeProvider theme={props.style}>
+    <style type="text/css">
+      @import
+      url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+      @import
+      url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+    </style>
     <Banner>
       <ServiceLogo serviceName={props.serviceName} />
-
       <Text>
         <h1>{props.mainText}</h1>
         <p>{props.subText}</p>
       </Text>
-
       <Button href={props.actionURL}>
         <span>{props.actionText}</span>
         <Arrow />
       </Button>
-
       <SparcsIcon />
-      {/*</div>*/}
     </Banner>
   </ThemeProvider>
-));
+);
 
 const Banner = styled.div(
   ({ theme }) => css`
     all: unset;
-    
+
     position: relative;
     font-family: NanumSquare, sans-serif;
     line-height: 1;
@@ -86,7 +88,7 @@ const Button = styled.a`
 const Text = styled.div(
   ({ theme }) => css`
     all: unset;
-    
+
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -99,14 +101,14 @@ const Text = styled.div(
 
     & > h1 {
       all: unset;
-      
+
       font-size: 16px;
       font-weight: 700;
     }
 
     & > p {
       all: unset;
-      
+
       font-size: 14px;
       font-weight: 400;
       opacity: 0.6;
