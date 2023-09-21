@@ -9,12 +9,6 @@ import type { TextPromotion } from "../../interface";
 
 export const TextBanner: React.FC<Omit<TextPromotion, "type">> = (props) => (
   <ThemeProvider theme={props.style}>
-    <style type="text/css">
-      @import
-      url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
-      @import
-      url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
-    </style>
     <Banner>
       <ServiceLogo serviceName={props.serviceName} />
       <Text>

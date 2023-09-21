@@ -22,6 +22,9 @@ export const Scope: React.FC<Props> = ({
 );
 
 const Reset = styled.div`
+  @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+  
   all: revert;
   line-height: initial;
   overflow: hidden;
