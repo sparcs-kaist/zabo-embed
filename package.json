@@ -1,5 +1,5 @@
 {
-  "name": "zabo-embed",
+  "name": "@sparcs-kaist/zabo-embed",
   "version": "0.0.7",
   "description": "Embed component for creating banner embeds in SPARCS services",
   "type": "module",
